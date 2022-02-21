@@ -9,6 +9,7 @@ import { PasswordComponent } from './password/password.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { passwordReducer } from './shared/password.reducer';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { MatButtonModule } from '@angular/material/button';
     BrowserModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    StoreModule.forRoot({}, {}),
+    StoreModule.forRoot({password: passwordReducer}, {}),
     MatCardModule,
     MatToolbarModule,
     MatButtonModule,
